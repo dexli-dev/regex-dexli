@@ -45,7 +45,7 @@
 		margin-bottom: 12px;
 	}
 	h2 {
-		font-family: var(--mono);
+		font-family: var(--display);
 		font-size: 12px;
 		text-transform: uppercase;
 		letter-spacing: 0.08em;
