@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+	<rect width="32" height="32" rx="7" fill="#0a0b0d" />
+	<!-- ∋ "contains as member" glyph for the regex sibling. Same palette as
+	     webhook.dexli.dev / cron.dexli.dev favicons (dark tile + #c6f135
+	     lime); the glyph is the only point of differentiation between
+	     siblings. Drawn as paths instead of <text> so it renders identically
+	     across systems without font fallback. -->
+	<!-- Outer cup: open on the LEFT (opposite of `∈`), bowl on the right. -->
+	<path d="M22 9 H14 a7 7 0 0 0 0 14 H22" fill="none" stroke="#c6f135" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+	<!-- Inner horizontal "member" bar. -->
+	<line x1="12.5" y1="16" x2="20" y2="16" stroke="#c6f135" stroke-width="2.2" stroke-linecap="round" />
+</svg>
