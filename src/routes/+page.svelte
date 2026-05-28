@@ -121,8 +121,49 @@
 	let matches = $derived<Match[]>(result && result.ok ? result.matches : []);
 </script>
 
+<script lang="ts" module>
+	const SEO = {
+		title: 'regex.dexli.dev — live regex tester with shareable URL state',
+		description:
+			'Test a JavaScript regular expression against any text. See matches highlighted in context, capture groups enumerated, and share the entire session as a single URL.',
+		url: 'https://regex.dexli.dev/',
+		ogImage: 'https://regex.dexli.dev/og-card.png'
+	};
+	const JSON_LD = {
+		'@context': 'https://schema.org',
+		'@type': 'WebApplication',
+		name: 'regex.dexli.dev',
+		url: SEO.url,
+		description:
+			'Live JavaScript regex tester with in-context match highlighting, enumerated capture groups, pattern library, and URL-shareable state.',
+		applicationCategory: 'DeveloperApplication',
+		operatingSystem: 'Any',
+		offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
+	};
+</script>
+
 <svelte:head>
-	<title>regex — live regex tester · dexli.dev</title>
+	<title>{SEO.title}</title>
+	<meta name="description" content={SEO.description} />
+
+	<!-- Open Graph (X / HN / Discord / Slack unfurling) -->
+	<meta property="og:type" content="website" />
+	<meta property="og:site_name" content="dexli.dev" />
+	<meta property="og:url" content={SEO.url} />
+	<meta property="og:title" content={SEO.title} />
+	<meta property="og:description" content={SEO.description} />
+	<meta property="og:image" content={SEO.ogImage} />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="630" />
+
+	<!-- Twitter / X — mirrors OG, summary_large_image card -->
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content={SEO.title} />
+	<meta name="twitter:description" content={SEO.description} />
+	<meta name="twitter:image" content={SEO.ogImage} />
+
+	<!-- Schema.org structured data -->
+	{@html `<script type="application/ld+json">${JSON.stringify(JSON_LD)}</script>`}
 </svelte:head>
 
 <div class="page">
