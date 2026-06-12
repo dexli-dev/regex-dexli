@@ -180,6 +180,15 @@
 
 	<!-- FUNCTIONAL UI :: FRONTEND slice. -->
 	<main class="wrap" data-engineer-slot="frontend">
+		<section class="hero" aria-label="what this tool is">
+			<h1>Test a regex <span class="accent">as you type.</span></h1>
+			<p class="lede">
+				A JavaScript regular expression against any text — matches highlighted in context,
+				capture groups enumerated, and the whole session (pattern, flags, test text) in the
+				URL, ready to share.
+			</p>
+		</section>
+
 		<section class="inputs" aria-label="pattern and test text">
 			<label class="field pattern">
 				<span class="label-row">
@@ -349,6 +358,30 @@
 		flex-direction: column;
 		gap: 28px;
 	}
+	.hero {
+		margin: 6px 0 22px;
+	}
+	.hero h1 {
+		font-family: var(--display);
+		font-size: clamp(28px, 4.5vw, 40px);
+		font-weight: 800;
+		letter-spacing: -0.03em;
+		line-height: 1.1;
+		margin: 0 0 10px 0;
+	}
+	.hero .accent {
+		color: var(--accent);
+	}
+	.lede {
+		font-family: var(--display);
+		font-size: clamp(14px, 2vw, 16px);
+		font-weight: 500;
+		line-height: 1.5;
+		color: var(--muted);
+		margin: 0;
+		max-width: 64ch;
+	}
+
 	.inputs {
 		display: flex;
 		flex-direction: column;

@@ -1,0 +1,29 @@
+# regex.dexli.dev
+
+> A live JavaScript regex tester. Type a pattern and test text; matches are highlighted in context and capture groups enumerated as you type. Includes a common-pattern library. Free, no signup — evaluation happens in your browser.
+
+Part of the dexli.dev tiny-tools family: one tool per subdomain, honest copy, no accounts, no upsell.
+
+## URL state (agent-relevant)
+
+The whole session serialises into the URL, so you can construct a pre-filled link:
+
+    https://regex.dexli.dev/?p=<urlencoded pattern>&t=<urlencoded test text>&f=<flags>
+
+- `p` — the pattern source, without surrounding slashes
+- `t` — the test text
+- `f` — flag characters, any subset of `gims` (global, ignoreCase, multiline, dotAll)
+
+Example: `https://regex.dexli.dev/?p=%5Cd%2B&t=order%2042&f=g` loads `\d+` with the `g` flag against "order 42".
+
+## Limits
+
+- JavaScript (ECMAScript) regex dialect — not PCRE, not RE2.
+
+## Family
+
+- [dexli.dev](https://dexli.dev/): the family index ([llms.txt](https://dexli.dev/llms.txt))
+- [webhook.dexli.dev](https://webhook.dexli.dev/): temporary HTTP inbox for testing webhooks
+- [cron.dexli.dev](https://cron.dexli.dev/): cron expression parser and firings preview
+- [diff.dexli.dev](https://diff.dexli.dev/): two-pane text/JSON diff
+- [transcript.dexli.dev](https://transcript.dexli.dev/): read LLM .jsonl logs as a conversation
